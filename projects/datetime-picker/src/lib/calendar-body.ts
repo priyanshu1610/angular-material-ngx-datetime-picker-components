@@ -193,6 +193,7 @@ export class NgxMatCalendarBody<D = any> implements OnChanges, OnDestroy, AfterV
   _emitActiveDateChange(cell: NgxMatCalendarCell, event: FocusEvent): void {
     if (cell.enabled) {
       this.activeDateChange.emit({value: cell.value, event});
+      this.selectedValueChange.emit({value: cell.value, event});
     }
   }
 
@@ -215,6 +216,9 @@ export class NgxMatCalendarBody<D = any> implements OnChanges, OnDestroy, AfterV
 
     if (columnChanges || !this._cellWidth) {
       this._cellWidth = `${100 / numCols}%`;
+    }
+    if(!this.startValue){
+      this.startValue = this.todayValue;
     }
   }
 

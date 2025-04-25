@@ -13,6 +13,7 @@ $inputWidth: 24px;
 
             &.ngx-mat-timepicker-spacer {
               font-weight: bold;
+              transform: translateY(-10px);
             }
 
             &.ngx-mat-timepicker-meridian {
@@ -40,6 +41,10 @@ $inputWidth: 24px;
               }
             }
 
+            .mat-mdc-icon-button .mat-mdc-button-touch-target {
+              height: $fontSizeIcon;
+              width: $fontSizeIcon;
+            }
             .mat-mdc-form-field {
               width: $inputWidth;
               max-width: $inputWidth;
